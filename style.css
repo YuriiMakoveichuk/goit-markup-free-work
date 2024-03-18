@@ -192,10 +192,6 @@ input {
         width: 590px;
     }
 
-    .header-logo {
-        margin-right: 101px;
-    }
-
     .header-nav-list {
         display: flex;
         gap: 24px;
@@ -204,11 +200,13 @@ input {
 
     .header-nav-link {
         display: block;
+        font-size: 14px;
         font-weight: 500;
         line-height: 1.14;
         padding-top: 28px;
         padding-bottom: 28px;
         transition: color 250ms linear;
+        color: #111;
     }
 
     .header-nav-link:hover,
@@ -284,111 +282,184 @@ input {
 
 /* ********* Hero ******** */
 
-.section-hero {
-    max-width: 335px;
+.hero-container{
     border-radius: 30px;
-    padding-top: 395px;padding-bottom: 20px;
+    padding-top: 395px;
+    padding-bottom: 20px;
     background-color: rgba(17, 17, 17, 0.4);
     margin: 0 auto;
     background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(./images/hero-img/chocolate-covered-cocoa-powder-mobile.jpg);
     color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 @media only screen and (min-resolution: 192dpi) and (max-width: 767px) {
+
     .section-hero {
     background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(./images/hero-img/chocolate-covered-cocoa-powder-mobile@2x.jpg);
     }
-}
-.hero-text {
-    max-width: 299px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: -0.03em;
-    margin-bottom: 32px;
-}
+    }
 
-.button-block {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 32px;
-}
+    .hero-par {
+        max-width: 299px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.hero-button {
-    border-radius: 100px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #fff;
-}
+    .hero-text {
+        max-width: 299px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        margin-bottom: 32px;
+    }
 
-.hero-button-buy {
-    padding: 12px 28px;
-    background-color: #fd9222;
-    transition: background-color 250ms linear, color 250ms linear;
-}
+    .button-block {
+        display: flex;
+        gap: 14px;
+    }
 
-.hero-button-made {
-    border: 1px solid #fff;
-    border-radius: 100px;
-    padding: 12px 28px;
-    background-color: transparent;
-    transition: background-color 250ms linear, color 250ms linear, border 250ms linear;
-}
+    .hero-button {
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff;
+        padding: 12px 28px;
+    }
 
-.hero-button-buy:hover,
-.hero-button-buy:focus {
-    background-color: #fcf1e0;
-    color: #fd9222;
-}
+    .hero-button-buy {
+        background-color: #fd9222;
+        transition: background-color 250ms linear, color 250ms linear;
+    }
 
-.hero-button-made:hover,
-.hero-button-made:focus {
-    background-color: #fff;
-    color: #fd9222;
-    border: 1px solid #fd9222;
-}
+    .hero-button-made {
+        border: 1px solid #fff;
+        background-color: transparent;
+        transition: background-color 250ms linear, color 250ms linear, border 250ms linear;
+    }
 
-.hero-scrol {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: -0.03em;
-    cursor: pointer;
-    transition: color 250ms linear;
-}
+    .hero-button-buy:hover,
+    .hero-button-buy:focus {
+        background-color: #fcf1e0;
+        color: #fd9222;
+    }
 
-.hero-scrol-block {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    line-height: 0;
-    fill: #fd9222;
-    transition: background-color 250ms linear,
-    transform 250ms linear, fill 250ms linear;
-}
+    .hero-button-made:hover,
+    .hero-button-made:focus {
+        background-color: #fff;
+        color: #fd9222;
+        border: 1px solid #fd9222;
+    }
 
-.hero-scrol:hover,
-.hero-scrol:focus{
-    color: #fd9222;
-}
+    .hero-scrol {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: -0.03em;
+        cursor: pointer;
+        transition: color 250ms linear;
+    }
 
-.hero-scrol:hover .hero-scrol-block,
-.hero-scrol:focus .hero-scrol-block {
-    background-color: #fd9222;
-    transform: rotate(-90deg);
-    fill: #fff;
-}
+    .hero-scrol-block {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        line-height: 0;
+        fill: #fd9222;
+        transition: background-color 250ms linear,
+        transform 250ms linear, fill 250ms linear;
+    }
 
+    .hero-scrol:hover,
+    .hero-scrol:focus{
+        color: #fd9222;
+    }
+
+    .hero-scrol:hover .hero-scrol-block,
+    .hero-scrol:focus .hero-scrol-block {
+        background-color: #fd9222;
+        transform: rotate(-90deg);
+        fill: #fff;
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .button-block {
+            margin-bottom: 32px;
+        }
+    }
 
 /* ================ Tablet ================== */
 
+@media only screen and (min-width: 768px) {
 
+    .hero-container {
+        padding-top: 671px;
+        padding-bottom: 40px;
+        background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(./images/hero-img/chocolate-covered-cocoa-powder-tablet.jpg);
+    }
+
+    .hero-par {
+        max-width: 624px;
+    }
+
+    .hero-button {
+        padding: 14px 40px;
+    }     
+
+    .hero-text {
+        max-width: 484px;
+        font-size: 28px;
+    }
+
+    .hero-block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-scrol {
+        font-size: 14px;
+    }
+
+    .hero-scrol-block {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media only screen and (min-resolution: 192dpi) and (max-width: 1167px) {
+    .section-hero {
+        background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(./images/hero-img/chocolate-covered-cocoa-powder-tablet@2x.jpg);
+    }
+}
 
 /* ================ Desktop ================== */
+
+@media only screen and (min-width: 1168px) {
+
+    .hero-container {
+        padding-top: 381px;
+        background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(./images/hero-img/chocolate-covered-cocoa-powder-desktop.jpg);
+    }
+
+    .hero-par {
+        max-width: 1056px;
+    }
+    
+}
+
+@media only screen and (min-resolution: 192dpi) and (min-width: 1168px) {
+    .section-hero {
+        background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(./images/hero-img/chocolate-covered-cocoa-powder-desktop@2x.jpg);
+    }
+}
